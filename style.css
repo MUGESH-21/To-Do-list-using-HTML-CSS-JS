@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+.container{
+    width:100%;
+    min-height: 100vh;
+    background:linear-gradient(135deg,rgb(83, 13, 235),rgb(126, 0, 0));
+    padding: 10px;
+    justify-content: center;
+}
+.todoapp{
+    width: 100%;
+    max-width: 540px;
+    background-color: aliceblue;
+    margin: 100px auto 20px;
+    padding: 40px 30px 40px;
+    border-radius: 10px;
+    /* background:linear-gradient(135deg,rgb(126, 0, 0),rgb(83, 13, 235)); */
+}
+h2{
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    color:rgb(54, 13, 142);
+    text-decoration: underline;
+    
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #5b2823;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius:50%;
+    background-image: url(radio_button_unchecked_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg)"orange";
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+    background-color: rgb(235, 102, 30);
+} 
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+
+}
+ul li.checked::before{
+    background-image: url(radio_button_unchecked_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg);
+    background-color: rgb(26, 83, 163);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    background-color: #04672a;
+    padding: 2% 5%;
+    border-radius: 10px;
+    font-size: 20px;
+    color: rgb(130, 214, 133);
+    text-align: center;
+    line-height: 15px;
+
+}
+ul li span:hover{
+    background-color: #555;
+    color: #fff;
+}
